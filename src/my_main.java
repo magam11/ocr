@@ -10,6 +10,7 @@ public class my_main {
                         "cmd",
                 };
         Process p;
+        
         try {
             p = Runtime.getRuntime().exec(command);
             new Thread(new SyncPipe(p.getErrorStream(), System.err)).start();
